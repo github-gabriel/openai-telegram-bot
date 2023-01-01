@@ -22,10 +22,11 @@ class Responses:
         return response['data'][0]['url']
 
     def chatgpt(self, input_text):
-        self.chat_cache.append('Q:' + input_text + '\n(Sprich auf Deutsch)A:')
+        self.delete_old_cache()
+        self.chat_cache.append(['Q:' + input_text + '\n(deutsch,kurz)A:', time.time()])
         response = openai.Completion.create(
             model=self.model_engine,
-            prompt=' '.join(self.chat_cache),
+            prompt=' '.join([item[0] for item in self.chat_cache]),
             temperature=0.7,
             max_tokens=256,
             top_p=1,
@@ -33,10 +34,21 @@ class Responses:
             presence_penalty=0,
             stop=['\nQ:']
         )
-        if len(self.chat_cache) > 10:
-            del self.chat_cache[:4]
-        self.chat_cache.append(response['choices'][0]['text'])
+        if len(self.chat_cache) > 6:
+            del self.chat_cache[:3]
+        self.chat_cache.append([response['choices'][0]['text'], time.time()])
+        print(self.chat_cache)
         return response['choices'][0]['text']
+
+    def delete_old_cache(self):
+        current_time = time.time()
+
+        i = 0
+        while i < len(self.chat_cache):
+            if current_time - self.chat_cache[i][1] > 1800:
+                del self.chat_cache[i]
+            else:
+                i += 1
 
     def get_text(self, image_path):
         return pytesseract.image_to_string(PIL.Image.open(image_path), config=self.config)
