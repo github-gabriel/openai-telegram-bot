@@ -34,4 +34,4 @@ Alle Requirements findest du in der [```requirements.txt```](https://github.com/
 | /image     | Eine Bildbeschreibung  | Generiert ein Bild mit Hilfe des DALL·E-Modells, das auf der von dem Benutzer angegebenen Beschreibung basiert              |
 | /translate | Eine Sprache, ein Bild | Versucht, ein von dem Benutzer gesendetes Bild in eine bestimmte Sprache zu übersetzen, indem es das GPT-3-Modell verwendet |
 
-***Einfache Nachrichten (keine Befehle) werden von GPT-3 beantwortet und lässt sich so wie ein normaler Chatbot nutzen***
+***Einfache Nachrichten (keine Befehle) werden von GPT-3 beantwortet, sodass der Bot wie ein Chatbot verwendet werden kann***
