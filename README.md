@@ -35,3 +35,27 @@ Alle Requirements findest du in der [```requirements.txt```](https://github.com/
 | /translate | Eine Sprache, ein Bild | Versucht, ein von dem Benutzer gesendetes Bild in eine bestimmte Sprache zu übersetzen, indem es das GPT-3-Modell verwendet |
 
 ***Einfache Nachrichten (keine Befehle) werden von GPT-3 beantwortet, sodass der Bot wie ein Chatbot verwendet werden kann***
+
+## Einsatz
+
+Um den Telegram Bot zu nutzen muss das Script einfach nur gestartet werden. Ich nutze dafür z.B. meinen Raspberry Pi 4 4GB. Als OS läuft Ubuntu Server 22.04 dort und um ihn auch sonst noch nutzen zu können nutze ich [Linux Screen](https://linuxize.com/post/how-to-use-linux-screen/), auf dem ich das Script dann ausgeführt habe.
+![TelegramBot](https://user-images.githubusercontent.com/92476790/210168684-9a8964a3-9642-4146-b1d9-ea30b81a0f9d.PNG)
+
+Hier sind einige Videos zur Demonstration der einzelnen Befehle:
+
+### Start, Help und Chatting
+
+https://user-images.githubusercontent.com/92476790/210168963-77095455-36fc-4f70-bef1-678dd3ac201c.mp4
+
+### Image
+
+https://user-images.githubusercontent.com/92476790/210168980-e06e9336-6559-4c2d-bb3c-923aa7cd4fd9.mp4
+
+### Translate
+
+https://user-images.githubusercontent.com/92476790/210168989-417e0ff5-7761-4817-9108-5b15c0fa9bb1.mp4
+
+
+
+
+
