@@ -23,6 +23,8 @@ Beim Programmieren hat mir [ChatGPT](https://chat.openai.com/chat) regelmäßig 
 
 Alle Requirements findest du in der [```requirements.txt```](https://github.com/github-gabriel/openai-telegram-bot/blob/main/requirements.txt)
 
+Installiere alle Requirements mit ```pip install -r requirements.txt```
+
 ***Notiz: Es könnte sein, dass du noch weitere Sachen benötigst, wie einen API Key für OpenAI und den Telegram Bot. Lies dir dafür am besten die Documentations der einzelnen Module und deren Requirements durch!***
 
 ## Befehle
