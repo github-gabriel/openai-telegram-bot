@@ -1,6 +1,7 @@
 import pytesseract
 import PIL.Image
 import openai
+import time
 
 openai.api_key = "API_KEY"
 
@@ -12,6 +13,11 @@ class Responses:
         self.chat_cache = []
         self.model_engine = "text-davinci-003"
         self.config = r"--psm 6 --oem 3"
+
+        # Cache Settings
+        self.cache_time = 1800  # in sek
+        self.cache_size = 10
+        self.cache_delete_elements = 3
 
     def dalle(self, prompt):
         response = openai.Image.create(
@@ -34,8 +40,8 @@ class Responses:
             presence_penalty=0,
             stop=['\nQ:']
         )
-        if len(self.chat_cache) > 6:
-            del self.chat_cache[:3]
+        if len(self.chat_cache) > self.cache_size:
+            del self.chat_cache[:self.cache_delete_elements]
         self.chat_cache.append([response['choices'][0]['text'], time.time()])
         print(self.chat_cache)
         return response['choices'][0]['text']
@@ -45,7 +51,7 @@ class Responses:
 
         i = 0
         while i < len(self.chat_cache):
-            if current_time - self.chat_cache[i][1] > 1800:
+            if current_time - self.chat_cache[i][1] > self.cache_time:
                 del self.chat_cache[i]
             else:
                 i += 1
