@@ -16,10 +16,10 @@ Beim Programmieren hat mir [ChatGPT](https://chat.openai.com/chat) regelmäßig 
 ## Requirements
 
 - Python 3.10 oder höher
-- Das [Python Telegram Bot](https://github.com/python-telegram-bot/python-telegram-bot) Modul (```pip install python-telegram-bot```)
-- Das [Pytesseract](https://github.com/madmaze/pytesseract) Modul (```pip install pytesseract```)
-- Das [Pillow](https://github.com/python-pillow/Pillow) Modul (```python3 -m pip install --upgrade Pillow```)
-- Das [OpenAI](https://github.com/openai/openai-python) Modul (```pip install --upgrade openai```)
+- Das [Python Telegram Bot](https://github.com/python-telegram-bot/python-telegram-bot) Modul
+- Das [Pytesseract](https://github.com/madmaze/pytesseract) Modul
+- Das [Pillow](https://github.com/python-pillow/Pillow) Modul 
+- Das [OpenAI](https://github.com/openai/openai-python) Modul
 
 Alle Requirements findest du in der [```requirements.txt```](https://github.com/github-gabriel/openai-telegram-bot/blob/main/requirements.txt)
 
@@ -41,13 +41,21 @@ Installiere alle Requirements mit ```pip install -r requirements.txt```
 ## Updates
 
 - ### Selbstlöschender Cache
-  Der Cache löscht alte Elemente jetzt automatisch. So fängt er jetzt keine Gespräche über Sachen an, die schon mehrere Stunden her sind. Hier ein Beispiel wie der 
+  Der Cache löscht alte Elemente jetzt automatisch. So fängt er jetzt keine Gespräche über Sachen an, die schon mehrere     Stunden her sind. Hier ein Beispiel wie der 
   selbstläschende Cache in Aktion aussieht:
   
   <img src="https://user-images.githubusercontent.com/92476790/210180081-1a721d56-003b-4171-9ca1-28241d6dff0e.jpg" width="420" height="400" />
   
   ***Zu Testzwecken war die Zeit zum Löschen nur auf 60sek eingestellt***
-
+  
+ - ### Cache Einstellungen
+   Die Einstellungen des Caches lassen sich jetzt auch über Befehle einstellen 
+   
+   <img src="https://user-images.githubusercontent.com/92476790/211151774-13c2048b-72f4-4199-b15a-564b7c3567db.jpg" width="280" height="450" />
+   
+   <img src="https://user-images.githubusercontent.com/92476790/211151794-3874f754-725f-4699-a7df-d35f652953ab.jpeg" width="280" height="450" />
+  
+   
 ## Einsatz
 
 Um den Telegram Bot zu nutzen muss das Script einfach nur gestartet werden. Ich nutze dafür z.B. meinen Raspberry Pi 4 4GB. Als OS läuft Ubuntu Server 22.04 dort und um ihn auch sonst noch nutzen zu können nutze ich [Linux Screen](https://linuxize.com/post/how-to-use-linux-screen/), auf dem ich das Script dann ausgeführt habe.
