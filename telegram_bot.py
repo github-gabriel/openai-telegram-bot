@@ -84,8 +84,8 @@ class TelegramBot:
     def translate(self, update, context):
         language_adj = ""
         if str(update.message.caption).lower().startswith("/translate"):
-            try:
-                language = update.message.caption.lower().split(" ")[1]
+            language = update.message.caption.lower().split(" ")[1]
+            if language:
                 match language:
                     case "latein":
                         language_adj = "lateinischen"
@@ -106,7 +106,7 @@ class TelegramBot:
                     if file.endswith(".jpg") or file.endswith(".png"):
                         print("[INFO] Bild gefunden: " + file + "\n[INFO] Übersetzung wird geladen...")
                         update.message.reply_text(self.responses.send_text(self.responses.get_text(file), language_adj))
-            except:
+            else:
                 update.message.reply_text(PARAMETER_INFO)
 
     def handle_message(self, update, context):
