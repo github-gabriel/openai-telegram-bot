@@ -20,7 +20,8 @@ class TelegramBot:
         self.dp.add_handler(CommandHandler("cache_time", self.cache_time, pass_args=True))
         self.dp.add_handler(CommandHandler("cache_size", self.cache_size, pass_args=True))
         self.dp.add_handler(CommandHandler("cache_delete_elements", self.cache_delete_elements, pass_args=True))
-
+        self.dp.add_handler(CommandHandler("clear_cache", self.clear_cache))
+        
         self.dp.add_handler(MessageHandler(Filters.photo, self.translate))
         self.dp.add_handler(MessageHandler(Filters.text, self.handle_message))
 
@@ -42,7 +43,12 @@ class TelegramBot:
                                   "Cache Settings:\n\n"
                                   "/cache_time [Zeit in Min] - Setzen der Zeit nach der der Cache gelöscht wird\n\n"
                                   "/cache_size [Größe] - Setze die maximale Größe des Caches\n\n"
-                                  "/cache_delete_elements [Anzahl] - Anzahl der Elemente die nach überschreiten der Cache Größe gelöscht werden\n\n")
+                                  "/cache_delete_elements [Anzahl] - Anzahl der Elemente die nach überschreiten der Cache Größe gelöscht werden\n\n"
+                                  "/clear_cache - Löscht den gesamten Cache")
+
+    def clear_cache(self, update, context):
+        self.responses.chat_cache.clear()
+        update.message.reply_text("Der Cache wurde gelöscht!")
 
     def cache_time(self, update, context):
         if context.args:
