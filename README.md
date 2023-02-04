@@ -29,6 +29,8 @@ Installiere alle Requirements mit ```pip install -r requirements.txt```
 
 ## Befehle
 
+### AI Befehle
+
 | Befehl     | Parameter              | Funktion                                                                                                                    |
 |------------|------------------------|-----------------------------------------------------------------------------------------------------------------------------|
 | /start     | Keine                  | Sendet eine Willkommensnachricht an den Benutzer                                                                            |
@@ -37,6 +39,15 @@ Installiere alle Requirements mit ```pip install -r requirements.txt```
 | /translate | Eine Sprache, ein Bild | Versucht, ein von dem Benutzer gesendetes Bild in eine bestimmte Sprache zu übersetzen, indem es das GPT-3-Modell verwendet |
 
 ***Einfache Nachrichten (keine Befehle) werden von GPT-3 beantwortet, sodass der Bot wie ein Chatbot verwendet werden kann***
+
+### Cache Befehle (💤)
+
+| Befehl                 | Parameter           | Funktion                                                                        |
+|------------------------|---------------------|---------------------------------------------------------------------------------|
+| /cache_time            | Zeit in Min.        | Setzt die Zeit nach der der Cache gelöscht wird                                 |
+| /cache_size            | Anzahl der Elemente | Setzt die maximale Größe des Caches fest                                        |
+| /cache_delete_elements | Anzahl der Elemente | Anzahl der Elemente die nach überschreiten der max. Cache Größe gelöscht werden |
+| /clear_cache           | Keine               | Löscht den gesamten Cache                                                       |
 
 ## Updates
 
