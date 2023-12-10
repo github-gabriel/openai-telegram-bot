@@ -61,12 +61,11 @@ Installiere alle Requirements mit ```pip install -r requirements.txt```
   
  - ### Cache Einstellungen
    Die Einstellungen des Caches lassen sich jetzt auch über Befehle einstellen 
-   
-   <img src="https://user-images.githubusercontent.com/92476790/211151774-13c2048b-72f4-4199-b15a-564b7c3567db.jpg" width="280" height="450" />
-   
-   <img src="https://user-images.githubusercontent.com/92476790/211151794-3874f754-725f-4699-a7df-d35f652953ab.jpeg" width="280" height="450" />
+
+<img src="https://user-images.githubusercontent.com/92476790/211151794-3874f754-725f-4699-a7df-d35f652953ab.jpeg" width="280" height="auto" />
+<br> 
+<img src="https://user-images.githubusercontent.com/92476790/211151774-13c2048b-72f4-4199-b15a-564b7c3567db.jpg" width="280" height="auto" />
   
-   
 ## Einsatz
 
 Um den Telegram Bot zu nutzen muss das Script einfach nur gestartet werden. Ich nutze dafür z.B. meinen Raspberry Pi 4 4GB. Als OS läuft Ubuntu Server 22.04 dort und um ihn auch sonst noch nutzen zu können nutze ich [Linux Screen](https://linuxize.com/post/how-to-use-linux-screen/), auf dem ich das Script dann ausgeführt habe.
