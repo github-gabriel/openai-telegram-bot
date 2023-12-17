@@ -9,10 +9,6 @@ Die Funktionen des Bots sind über spezielle Befehle verfügbar und umfassen:
 
 Der Code enthält auch Funktionen zum Behandeln von Fehlern und zum Herunterladen von Bildern. Die verschiedenen Funktionen werden von Handlern aufgerufen, wenn Benutzereingaben empfangen werden.
 
-## ChatGPT
-
-Beim Programmieren hat mir [ChatGPT](https://chat.openai.com/chat) regelmäßig geholfen. Es ist ein schnelles und einfaches Tool um z.B. Codebeispiele zu bekommen ohne sich durch einen Haufen Dokumentation zu wühlen. Daher bin ich einfach begeistert von ChatGPT. Ich bin sogar so begeistert, dass die obige Beschreibung des Projektes komplett von ChatGPT geschrieben wurde.
-
 ## Requirements
 
 - Python 3.10 oder höher
